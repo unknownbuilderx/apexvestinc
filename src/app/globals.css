@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --brand-green: #00c853;
+  --brand-green-dark: #007b33;
+  --brand-green-light: #e8fff1;
+  --brand-navy: #0a1628;
+  --brand-navy-mid: #112240;
+  --brand-gray: #64748b;
+  --brand-light: #f8fafc;
+}
+
+/* ── Base reset ─────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent font scaling on orientation change in iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--brand-light);
+  color: var(--brand-navy);
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+  width: 100%;
+  /* Smooth scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Safe area support (iPhone notch / Dynamic Island) ──────────────────────── */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-left {
+  padding-left: env(safe-area-inset-left);
+}
+.safe-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* ── Minimum touch target size (Apple HIG: 44×44pt) ────────────────────────── */
+button,
+a,
+[role="button"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  min-height: 44px;
+}
+
+/* Override for tiny inline elements that shouldn't be 44px tall */
+.touch-small {
+  min-height: unset;
+}
+
+/* ── Prevent images overflowing containers ──────────────────────────────────── */
+img,
+video,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Input / form improvements on iOS ──────────────────────────────────────── */
+input,
+textarea,
+select {
+  font-size: 16px; /* Prevents iOS auto-zoom on focus */
+  border-radius: 0; /* Prevent iOS default radius */
+}
+
+/* ── Custom scrollbar (desktop only) ───────────────────────────────────────── */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+/* ── Prevent long words/URLs breaking layout on mobile ─────────────────────── */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ── Smooth momentum scrolling in overflow containers ──────────────────────── */
+.overflow-y-auto,
+.overflow-x-auto,
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+}
