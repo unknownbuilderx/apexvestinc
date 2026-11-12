@@ -4,7 +4,8 @@
 // For Vercel hosting:   set it in Vercel project env vars dashboard
 // Fallback chain: env var → production URL.
 const BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://grow-vest-lemon.vercel.app/api";
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://apexvestinc-server.vercel.app/api";
 
 // ─── Token helpers ────────────────────────────────────────────────────────────
 const getToken = () => {
