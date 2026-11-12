@@ -13,7 +13,7 @@ const categories = [
       },
       {
         q: "Is there an age requirement?",
-        a: "You must be at least 18 years old to open an investment account with Grow Vest Inc.",
+        a: "You must be at least 18 years old to open an investment account with ApexVest Inc.",
       },
       {
         q: "What countries do you support?",
@@ -71,7 +71,7 @@ const categories = [
     cat: "Security & Trust",
     items: [
       {
-        q: "Is Grow Vest Inc. regulated?",
+        q: "Is ApexVest Inc. regulated?",
         a: "Yes. We are registered with the SEC and FINRA, and fully compliant with all applicable US financial regulations.",
       },
       {
@@ -83,7 +83,7 @@ const categories = [
         a: "We use 256-bit SSL encryption, two-factor authentication, biometric login, and real-time fraud monitoring on all accounts.",
       },
       {
-        q: "What happens if Grow Vest shuts down?",
+        q: "What happens if ApexVest shuts down?",
         a: "Client funds are always segregated and protected. In the unlikely event of insolvency, all investor funds are returned in full before any other obligations.",
       },
     ],
@@ -98,7 +98,7 @@ function AccordionItem({ q, a }) {
         className="w-full flex items-center justify-between px-5 py-4 text-left"
         onClick={() => setOpen(!open)}
       >
-        <span className="font-medium text-[#0A1628] text-sm">{q}</span>
+        <span className="font-medium text-[#0A0F1E] text-sm">{q}</span>
         <svg
           className={`w-5 h-5 text-slate-400 flex-shrink-0 ml-4 transition-transform ${open ? "rotate-180" : ""}`}
           fill="none"
@@ -130,16 +130,16 @@ export default function FAQPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A1628]">
+      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A0F1E]">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
             FAQ
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white">
             Frequently Asked Questions
           </h1>
           <p className="mt-5 text-slate-300">
-            Find quick answers to the most common questions about Grow Vest Inc.
+            Find quick answers to the most common questions about ApexVest Inc.
           </p>
         </div>
       </section>
@@ -155,7 +155,7 @@ export default function FAQPage() {
                 onClick={() => setActiveCategory(c.cat)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                   activeCategory === c.cat
-                    ? "bg-[#0A1628] text-white"
+                    ? "bg-[#0A0F1E] text-white"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
@@ -180,7 +180,7 @@ export default function FAQPage() {
       {/* Still have questions */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-[#0A1628] mb-3">
+          <h2 className="text-2xl font-bold text-[#0A0F1E] mb-3">
             Still have questions?
           </h2>
           <p className="text-slate-500 mb-6">
@@ -189,7 +189,7 @@ export default function FAQPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/contact"
-              className="px-6 py-3 bg-[#00C853] text-white font-semibold rounded-xl text-sm hover:bg-[#00a844] transition-colors"
+              className="px-6 py-3 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold rounded-xl text-sm hover:opacity-90 transition-opacity"
             >
               Contact Support
             </a>

@@ -71,29 +71,30 @@ export default function LoginPage() {
     `w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 transition-colors ${
       fieldErrors[field] && fieldErrors[field].trim()
         ? "border-red-300 bg-red-50 focus:ring-red-200 focus:border-red-400"
-        : "border-slate-200 focus:ring-[#00C853]/30 focus:border-[#00C853]"
+        : "border-slate-200 focus:ring-[#6366F1]/30 focus:border-[#6366F1]"
     }`;
 
   return (
     <div className="min-h-screen flex">
       {/* Left panel — branding */}
-      <div className="hidden lg:flex lg:w-1/2 bg-[#0A1628] flex-col justify-between p-12 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-[#0A0F1E] flex-col justify-between p-12 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage:
-              "linear-gradient(#00C853 1px, transparent 1px), linear-gradient(90deg, #00C853 1px, transparent 1px)",
+              "linear-gradient(#6366F1 1px, transparent 1px), linear-gradient(90deg, #6366F1 1px, transparent 1px)",
             backgroundSize: "40px 40px",
           }}
         />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00C853]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#6366F1]/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-[#8B5CF6]/10 rounded-full blur-3xl" />
         <div className="relative z-10">
           <Logo light />
         </div>
         <div className="relative z-10">
           <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[#00C853] text-white text-xs font-bold flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] text-white text-xs font-bold flex items-center justify-center">
                 AM
               </div>
               <div>
@@ -104,7 +105,7 @@ export default function LoginPage() {
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed italic">
-              &ldquo;My portfolio grew 23% in 8 months. Grow Vest is the most
+              &ldquo;My portfolio grew 23% in 8 months. ApexVest is the most
               transparent platform I&apos;ve ever used.&rdquo;
             </p>
             <div className="flex gap-1 mt-3">
@@ -126,7 +127,7 @@ export default function LoginPage() {
               { val: "140K+", label: "Investors" },
             ].map((s) => (
               <div key={s.label}>
-                <p className="text-[#00C853] font-bold text-lg">{s.val}</p>
+                <p className="text-[#8B5CF6] font-bold text-lg">{s.val}</p>
                 <p className="text-slate-400 text-xs">{s.label}</p>
               </div>
             ))}
@@ -142,11 +143,11 @@ export default function LoginPage() {
           </div>
 
           <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-8">
-            <h1 className="text-2xl font-bold text-[#0A1628] mb-1">
+            <h1 className="text-2xl font-bold text-[#0A0F1E] mb-1">
               Welcome back
             </h1>
             <p className="text-slate-500 text-sm mb-8">
-              Sign in to your Grow Vest account
+              Sign in to your ApexVest account
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
@@ -189,7 +190,7 @@ export default function LoginPage() {
                   </label>
                   <Link
                     href="/forgot-password"
-                    className="text-xs text-[#00C853] hover:underline"
+                    className="text-xs text-[#6366F1] hover:underline"
                   >
                     Forgot password?
                   </Link>
@@ -248,7 +249,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#00C853] text-white font-semibold py-3.5 rounded-xl hover:bg-[#00a844] transition-colors text-sm disabled:opacity-70 flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm disabled:opacity-70 flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>
@@ -289,7 +290,7 @@ export default function LoginPage() {
               Don&apos;t have an account?{" "}
               <Link
                 href="/signup"
-                className="text-[#00C853] font-semibold hover:underline"
+                className="text-[#6366F1] font-semibold hover:underline"
               >
                 Sign up free
               </Link>

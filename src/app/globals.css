@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --brand-green: #00c853;
-  --brand-green-dark: #007b33;
-  --brand-green-light: #e8fff1;
-  --brand-navy: #0a1628;
-  --brand-navy-mid: #112240;
+  --brand-accent: #6366f1;
+  --brand-accent-dark: #4f46e5;
+  --brand-accent-light: #eef2ff;
+  --brand-violet: #8b5cf6;
+  --brand-navy: #0a0f1e;
+  --brand-navy-mid: #141b2e;
   --brand-gray: #64748b;
   --brand-light: #f8fafc;
 }

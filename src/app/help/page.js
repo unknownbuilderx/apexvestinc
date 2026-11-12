@@ -6,7 +6,7 @@ const helpCategories = [
   {
     icon: "🚀",
     title: "Getting Started",
-    desc: "New to Grow Vest? Learn how to create your account and make your first investment.",
+    desc: "New to ApexVest? Learn how to create your account and make your first investment.",
     articles: [
       "How to create an account",
       "Verifying your identity (KYC)",
@@ -18,7 +18,7 @@ const helpCategories = [
   {
     icon: "💰",
     title: "Deposits & Funding",
-    desc: "Everything about adding money to your Grow Vest account.",
+    desc: "Everything about adding money to your ApexVest account.",
     articles: [
       "Supported payment methods",
       "How long deposits take",
@@ -66,7 +66,7 @@ const helpCategories = [
   {
     icon: "🤝",
     title: "Referrals & Bonuses",
-    desc: "Earn extra by referring friends to Grow Vest.",
+    desc: "Earn extra by referring friends to ApexVest.",
     articles: [
       "How the referral program works",
       "Claiming your referral bonus",
@@ -83,9 +83,9 @@ export default function HelpPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A1628]">
+      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A0F1E]">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
             Help Center
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white">
@@ -113,7 +113,7 @@ export default function HelpPage() {
               <input
                 type="text"
                 placeholder="Search help articles..."
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#00C853]/50"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#6366F1]/50"
               />
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function HelpPage() {
                 className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 hover:shadow-md transition-shadow"
               >
                 <div className="text-3xl mb-3">{cat.icon}</div>
-                <h3 className="font-bold text-[#0A1628] text-lg mb-1">
+                <h3 className="font-bold text-[#0A0F1E] text-lg mb-1">
                   {cat.title}
                 </h3>
                 <p className="text-slate-500 text-sm mb-4 leading-relaxed">
@@ -141,7 +141,7 @@ export default function HelpPage() {
                     <li key={a}>
                       <Link
                         href={cat.href}
-                        className="text-sm text-[#00C853] hover:underline flex items-center gap-1"
+                        className="text-sm text-[#6366F1] hover:underline flex items-center gap-1"
                       >
                         <svg
                           className="w-3.5 h-3.5"
@@ -170,7 +170,7 @@ export default function HelpPage() {
       {/* Contact strip */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-[#0A1628] mb-3">
+          <h2 className="text-2xl font-bold text-[#0A0F1E] mb-3">
             Can&apos;t find what you need?
           </h2>
           <p className="text-slate-500 mb-8">
@@ -182,17 +182,17 @@ export default function HelpPage() {
               {
                 icon: "📧",
                 label: "Email Support",
-                sub: "support@growvestinc.com",
+                sub: "support@apexvestinc.com",
               },
-              { icon: "📞", label: "Phone Support", sub: "+1 (800) GRW-VEST" },
+              { icon: "📞", label: "Phone Support", sub: "+1 (800) APX-VEST" },
             ].map((c) => (
               <Link
                 href="/contact"
                 key={c.label}
-                className="bg-white border border-slate-200 rounded-xl p-4 hover:border-[#00C853] hover:shadow-sm transition-all"
+                className="bg-white border border-slate-200 rounded-xl p-4 hover:border-[#6366F1] hover:shadow-sm transition-all"
               >
                 <div className="text-2xl mb-2">{c.icon}</div>
-                <p className="font-semibold text-[#0A1628] text-sm">
+                <p className="font-semibold text-[#0A0F1E] text-sm">
                   {c.label}
                 </p>
                 <p className="text-slate-400 text-xs mt-0.5">{c.sub}</p>

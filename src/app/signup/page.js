@@ -164,21 +164,21 @@ export default function SignUpPage() {
     "bg-red-400",
     "bg-amber-400",
     "bg-blue-400",
-    "bg-[#00C853]",
+    "bg-[#6366F1]",
   ][strength];
   const strengthText = [
     "",
     "text-red-500",
     "text-amber-500",
     "text-blue-500",
-    "text-[#00C853]",
+    "text-[#6366F1]",
   ][strength];
 
   const inputClass = (field) =>
     `w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 transition-colors ${
       fieldErrors[field]
         ? "border-red-300 bg-red-50 focus:ring-red-200 focus:border-red-400"
-        : "border-slate-200 focus:ring-[#00C853]/30 focus:border-[#00C853]"
+        : "border-slate-200 focus:ring-[#6366F1]/30 focus:border-[#6366F1]"
     }`;
 
   const FieldError = ({ field }) =>
@@ -205,9 +205,9 @@ export default function SignUpPage() {
       {showSuccessModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-8 text-center animate-in fade-in zoom-in duration-300">
-            <div className="w-20 h-20 bg-[#E8FFF1] rounded-full flex items-center justify-center mx-auto mb-5">
+            <div className="w-20 h-20 bg-[#EEF2FF] rounded-full flex items-center justify-center mx-auto mb-5">
               <svg
-                className="w-10 h-10 text-[#00C853]"
+                className="w-10 h-10 text-[#6366F1]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -220,11 +220,11 @@ export default function SignUpPage() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-[#0A1628] mb-2">
+            <h2 className="text-2xl font-bold text-[#0A0F1E] mb-2">
               Welcome, {createdName}! 🎉
             </h2>
             <p className="text-slate-500 text-sm mb-2">
-              Your Grow Vest account has been created successfully.
+              Your ApexVest account has been created successfully.
             </p>
             <p className="text-slate-400 text-xs mb-6">
               Redirecting you to your dashboard…
@@ -232,12 +232,12 @@ export default function SignUpPage() {
             {/* Animated progress bar */}
             <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden mb-4">
               <div
-                className="h-full bg-[#00C853] rounded-full animate-pulse"
+                className="h-full bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] rounded-full animate-pulse"
                 style={{ width: "100%" }}
               />
             </div>
-            <div className="bg-[#E8FFF1] rounded-xl p-4 text-left space-y-2">
-              <p className="text-[#00C853] text-xs font-semibold uppercase tracking-wider">
+            <div className="bg-[#EEF2FF] rounded-xl p-4 text-left space-y-2">
+              <p className="text-[#6366F1] text-xs font-semibold uppercase tracking-wider">
                 What&apos;s next
               </p>
               {[
@@ -250,7 +250,7 @@ export default function SignUpPage() {
                   className="flex items-center gap-2 text-sm text-slate-600"
                 >
                   <svg
-                    className="w-4 h-4 text-[#00C853] flex-shrink-0"
+                    className="w-4 h-4 text-[#6366F1] flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -272,16 +272,17 @@ export default function SignUpPage() {
 
       <div className="min-h-screen flex w-full">
         {/* Left branding */}
-        <div className="hidden lg:flex lg:w-5/12 bg-[#0A1628] flex-col p-12 relative overflow-hidden">
+        <div className="hidden lg:flex lg:w-5/12 bg-[#0A0F1E] flex-col p-12 relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-5"
             style={{
               backgroundImage:
-                "linear-gradient(#00C853 1px, transparent 1px), linear-gradient(90deg, #00C853 1px, transparent 1px)",
+                "linear-gradient(#6366F1 1px, transparent 1px), linear-gradient(90deg, #6366F1 1px, transparent 1px)",
               backgroundSize: "40px 40px",
             }}
           />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00C853]/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#6366F1]/10 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-0 w-64 h-64 bg-[#8B5CF6]/10 rounded-full blur-3xl" />
           <div className="relative z-10">
             <Logo light />
           </div>
@@ -291,7 +292,7 @@ export default function SignUpPage() {
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed mb-8">
               Join 140,000+ investors across the US earning consistent returns
-              with Grow Vest Inc.
+              with ApexVest Inc.
             </p>
             <div className="space-y-3">
               {[
@@ -301,7 +302,7 @@ export default function SignUpPage() {
                 "Bank-grade security & encryption",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#00C853] flex items-center justify-center flex-shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -331,7 +332,7 @@ export default function SignUpPage() {
             </div>
 
             <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-8">
-              <h1 className="text-2xl font-bold text-[#0A1628] mb-1">
+              <h1 className="text-2xl font-bold text-[#0A0F1E] mb-1">
                 Create your account
               </h1>
               <p className="text-slate-500 text-sm mb-6">
@@ -343,10 +344,10 @@ export default function SignUpPage() {
                 {steps.map((s, i) => (
                   <div key={s} className="flex-1">
                     <div
-                      className={`h-1.5 rounded-full transition-all duration-300 ${i <= step ? "bg-[#00C853]" : "bg-slate-200"}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${i <= step ? "bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]" : "bg-slate-200"}`}
                     />
                     <p
-                      className={`text-xs mt-1.5 font-medium ${i <= step ? "text-[#00C853]" : "text-slate-400"}`}
+                      className={`text-xs mt-1.5 font-medium ${i <= step ? "text-[#6366F1]" : "text-slate-400"}`}
                     >
                       {s}
                     </p>
@@ -387,7 +388,7 @@ export default function SignUpPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[#00C853] text-white font-semibold py-3.5 rounded-xl hover:bg-[#00a844] transition-colors text-sm"
+                    className="w-full bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm"
                   >
                     Continue →
                   </button>
@@ -477,7 +478,7 @@ export default function SignUpPage() {
                     </button>
                     <button
                       type="submit"
-                      className="flex-1 bg-[#00C853] text-white font-semibold py-3.5 rounded-xl hover:bg-[#00a844] transition-colors text-sm"
+                      className="flex-1 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm"
                     >
                       Continue →
                     </button>
@@ -561,15 +562,15 @@ export default function SignUpPage() {
                         type="checkbox"
                         checked={form.agree}
                         onChange={(e) => setField("agree", e.target.checked)}
-                        className="mt-0.5 rounded border-slate-300 text-[#00C853] focus:ring-[#00C853]"
+                        className="mt-0.5 rounded border-slate-300 text-[#6366F1] focus:ring-[#6366F1]"
                       />
                       <span className="text-xs text-slate-500 leading-relaxed">
-                        I agree to Grow Vest Inc.&apos;s{" "}
-                        <a href="#" className="text-[#00C853] hover:underline">
+                        I agree to ApexVest Inc.&apos;s{" "}
+                        <a href="#" className="text-[#6366F1] hover:underline">
                           Terms of Service
                         </a>{" "}
                         and{" "}
-                        <a href="#" className="text-[#00C853] hover:underline">
+                        <a href="#" className="text-[#6366F1] hover:underline">
                           Privacy Policy
                         </a>
                       </span>
@@ -584,13 +585,13 @@ export default function SignUpPage() {
                     </label>
                     <div className="flex items-center gap-3">
                       <div className="flex items-center gap-2 bg-slate-100 rounded-xl px-4 py-3">
-                        <span className="text-base font-bold text-[#0A1628]">
+                        <span className="text-base font-bold text-[#0A0F1E]">
                           {captcha.a} + {captcha.b} = ?
                         </span>
                         <button
                           type="button"
                           onClick={genCaptcha}
-                          className="text-slate-400 hover:text-[#00C853] ml-1"
+                          className="text-slate-400 hover:text-[#6366F1] ml-1"
                           title="New question"
                         >
                           <svg
@@ -617,7 +618,7 @@ export default function SignUpPage() {
                         }}
                         placeholder="Your answer"
                         required
-                        className="w-32 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#00C853]/30 focus:border-[#00C853]"
+                        className="w-32 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6366F1]/30 focus:border-[#6366F1]"
                       />
                     </div>
                     {captchaError && (
@@ -652,7 +653,7 @@ export default function SignUpPage() {
                     <button
                       type="submit"
                       disabled={loading || !captcha.answer || !form.agree}
-                      className="flex-1 bg-[#00C853] text-white font-semibold py-3.5 rounded-xl hover:bg-[#00a844] transition-colors text-sm disabled:opacity-60 flex items-center justify-center gap-2"
+                      className="flex-1 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm disabled:opacity-60 flex items-center justify-center gap-2"
                     >
                       {loading ? (
                         <>
@@ -689,7 +690,7 @@ export default function SignUpPage() {
                 Already have an account?{" "}
                 <Link
                   href="/login"
-                  className="text-[#00C853] font-semibold hover:underline"
+                  className="text-[#6366F1] font-semibold hover:underline"
                 >
                   Sign in
                 </Link>

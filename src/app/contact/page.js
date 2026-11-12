@@ -21,7 +21,7 @@ const contactMethods = [
       </svg>
     ),
     label: "Email Us",
-    value: "support@growvestinc.com",
+    value: "support@apexvestinc.com",
     sub: "We reply within 2 hours",
   },
   {
@@ -41,7 +41,7 @@ const contactMethods = [
       </svg>
     ),
     label: "Call Us",
-    value: "+1 (800) GRW-VEST",
+    value: "+1 (800) APX-VEST",
     sub: "Mon–Fri, 8am–8pm EST",
   },
   {
@@ -111,9 +111,9 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A1628]">
+      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A0F1E]">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
             Contact Us
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white">
@@ -135,10 +135,10 @@ export default function ContactPage() {
                 key={m.label}
                 className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm text-center"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#E8FFF1] text-[#00C853] flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] text-[#6366F1] flex items-center justify-center mx-auto mb-4">
                   {m.icon}
                 </div>
-                <p className="font-semibold text-[#0A1628] text-sm mb-1">
+                <p className="font-semibold text-[#0A0F1E] text-sm mb-1">
                   {m.label}
                 </p>
                 <p className="text-slate-700 text-sm font-medium">{m.value}</p>
@@ -153,7 +153,7 @@ export default function ContactPage() {
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0A1628]">
+            <h2 className="text-3xl font-bold text-[#0A0F1E]">
               Send us a message
             </h2>
             <p className="text-slate-500 mt-2 text-sm">
@@ -162,8 +162,8 @@ export default function ContactPage() {
           </div>
 
           {sent ? (
-            <div className="bg-[#E8FFF1] border border-[#00C853]/30 rounded-2xl p-10 text-center">
-              <div className="w-16 h-16 bg-[#00C853] rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-[#EEF2FF] border border-[#6366F1]/30 rounded-2xl p-10 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -178,7 +178,7 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#0A1628] mb-2">
+              <h3 className="text-xl font-bold text-[#0A0F1E] mb-2">
                 Message Sent!
               </h3>
               <p className="text-slate-600">
@@ -202,7 +202,7 @@ export default function ContactPage() {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="John Doe"
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#00C853]/30 focus:border-[#00C853]"
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6366F1]/30 focus:border-[#6366F1]"
                   />
                 </div>
                 <div>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                       setForm({ ...form, email: e.target.value })
                     }
                     placeholder="john@email.com"
-                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#00C853]/30 focus:border-[#00C853]"
+                    className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6366F1]/30 focus:border-[#6366F1]"
                   />
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                   onChange={(e) =>
                     setForm({ ...form, subject: e.target.value })
                   }
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#00C853]/30 focus:border-[#00C853] text-slate-700"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6366F1]/30 focus:border-[#6366F1] text-slate-700"
                 >
                   <option value="">Select a topic</option>
                   <option>Account & Registration</option>
@@ -253,12 +253,12 @@ export default function ContactPage() {
                     setForm({ ...form, message: e.target.value })
                   }
                   placeholder="Tell us how we can help..."
-                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#00C853]/30 focus:border-[#00C853] resize-none"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6366F1]/30 focus:border-[#6366F1] resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#00C853] text-white font-semibold py-3.5 rounded-xl hover:bg-[#00a844] transition-colors text-sm"
+                className="w-full bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm"
               >
                 Send Message
               </button>

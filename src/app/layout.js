@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Grow Vest Inc. — Invest Smarter, Grow Faster",
+  title: "ApexVest Inc. — Invest Smarter, Reach the Apex",
   description:
-    "Grow Vest Inc. is a premium investment platform helping you build wealth through smart, diversified portfolios. Start investing today.",
-  keywords: "invest, portfolio, wealth, fintech, grow vest, investments",
+    "ApexVest Inc. is a premium investment platform helping you build wealth through smart, diversified portfolios. Start investing today.",
+  keywords: "invest, portfolio, wealth, fintech, apexvest, investments",
   openGraph: {
-    title: "Grow Vest Inc.",
-    description: "Invest Smarter, Grow Faster",
+    title: "ApexVest Inc.",
+    description: "Invest Smarter, Reach the Apex",
     type: "website",
   },
 };
@@ -28,7 +28,7 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: "cover",
-  themeColor: "#0A1628",
+  themeColor: "#0A0F1E",
 };
 
 export default function RootLayout({ children }) {

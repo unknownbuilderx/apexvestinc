@@ -29,7 +29,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-slate-600 hover:text-[#00C853] transition-colors"
+                className="text-sm font-medium text-slate-600 hover:text-[#6366F1] transition-colors"
               >
                 {l.label}
               </Link>
@@ -40,13 +40,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/login"
-              className="text-sm font-medium text-slate-700 hover:text-[#00C853] transition-colors px-4 py-2"
+              className="text-sm font-medium text-slate-700 hover:text-[#6366F1] transition-colors px-4 py-2"
             >
               Log In
             </Link>
             <Link
               href="/signup"
-              className="text-sm font-semibold bg-[#00C853] text-white px-5 py-2 rounded-lg hover:bg-[#00a844] transition-colors"
+              className="text-sm font-semibold bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white px-5 py-2 rounded-lg hover:opacity-90 transition-opacity"
             >
               Get Started
             </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block text-sm font-medium text-slate-700 hover:text-[#00C853] py-2"
+              className="block text-sm font-medium text-slate-700 hover:text-[#6366F1] py-2"
             >
               {l.label}
             </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/signup"
-              className="text-sm font-semibold text-center bg-[#00C853] text-white rounded-lg py-2.5"
+              className="text-sm font-semibold text-center bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white rounded-lg py-2.5"
             >
               Get Started
             </Link>

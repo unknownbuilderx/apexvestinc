@@ -35,7 +35,7 @@ const team = [
 ];
 
 const milestones = [
-  { year: "2019", event: "Grow Vest Inc. founded in New York, NY" },
+  { year: "2019", event: "ApexVest Inc. founded in New York, NY" },
   { year: "2020", event: "Reached 5,000 active investors and $10M AUM" },
   { year: "2021", event: "Launched mobile app with 50K downloads in 3 months" },
   { year: "2022", event: "Expanded nationwide across 30 US states, $250M AUM" },
@@ -49,16 +49,16 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A1628]">
+      <section className="pt-20 sm:pt-24 pb-14 sm:pb-16 bg-[#0A0F1E]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
             About Us
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
             We&apos;re on a mission to democratize wealth
           </h1>
           <p className="mt-6 text-slate-300 text-lg leading-relaxed max-w-2xl mx-auto">
-            Grow Vest Inc. was built with one belief: that every American
+            ApexVest Inc. was built with one belief: that every American
             deserves access to institutional-quality investments, not just the
             privileged few.
           </p>
@@ -70,10 +70,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
                 Our Story
               </p>
-              <h2 className="text-3xl font-bold text-[#0A1628] mb-5">
+              <h2 className="text-3xl font-bold text-[#0A0F1E] mb-5">
                 Started in a New York studio. Now managing billions.
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm">
@@ -84,7 +84,7 @@ export default function AboutPage() {
                   through diversified portfolios.
                 </p>
                 <p>
-                  They built Grow Vest Inc. to fix that — a platform that
+                  They built ApexVest Inc. to fix that — a platform that
                   combines the sophistication of institutional investment
                   management with a consumer-grade experience anyone can use.
                 </p>
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
               <Link
                 href="/signup"
-                className="mt-8 inline-block px-8 py-3 bg-[#00C853] text-white font-semibold rounded-xl text-sm hover:bg-[#00a844] transition-colors"
+                className="mt-8 inline-block px-8 py-3 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold rounded-xl text-sm hover:opacity-90 transition-opacity"
               >
                 Join Us Today
               </Link>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                   key={s.label}
                   className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center"
                 >
-                  <p className="text-3xl font-bold text-[#00C853]">{s.val}</p>
+                  <p className="text-3xl font-bold text-[#6366F1]">{s.val}</p>
                   <p className="text-slate-500 text-sm mt-1">{s.label}</p>
                 </div>
               ))}
@@ -125,10 +125,10 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
               Our Values
             </p>
-            <h2 className="text-3xl font-bold text-[#0A1628]">
+            <h2 className="text-3xl font-bold text-[#0A0F1E]">
               What we stand for
             </h2>
           </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm"
               >
                 <div className="text-3xl mb-3">{v.icon}</div>
-                <h3 className="font-semibold text-[#0A1628] mb-2">{v.title}</h3>
+                <h3 className="font-semibold text-[#0A0F1E] mb-2">{v.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">
                   {v.desc}
                 </p>
@@ -153,10 +153,10 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
               Milestones
             </p>
-            <h2 className="text-3xl font-bold text-[#0A1628]">
+            <h2 className="text-3xl font-bold text-[#0A0F1E]">
               Our journey so far
             </h2>
           </div>
@@ -165,8 +165,8 @@ export default function AboutPage() {
             <div className="space-y-8">
               {milestones.map((m) => (
                 <div key={m.year} className="flex gap-6 items-start">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0A1628] flex items-center justify-center z-10">
-                    <span className="text-[#00C853] text-xs font-bold">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0A0F1E] flex items-center justify-center z-10">
+                    <span className="text-[#8B5CF6] text-xs font-bold">
                       {m.year}
                     </span>
                   </div>
@@ -184,11 +184,11 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
               Leadership
             </p>
-            <h2 className="text-3xl font-bold text-[#0A1628]">
-              The team behind Grow Vest
+            <h2 className="text-3xl font-bold text-[#0A0F1E]">
+              The team behind ApexVest
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -197,11 +197,11 @@ export default function AboutPage() {
                 key={t.name}
                 className="bg-white rounded-2xl p-6 border border-slate-100 flex items-center gap-4"
               >
-                <div className="w-14 h-14 rounded-full bg-[#0A1628] text-white font-bold flex items-center justify-center text-sm flex-shrink-0">
+                <div className="w-14 h-14 rounded-full bg-[#0A0F1E] text-white font-bold flex items-center justify-center text-sm flex-shrink-0">
                   {t.initials}
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0A1628]">{t.name}</p>
+                  <p className="font-semibold text-[#0A0F1E]">{t.name}</p>
                   <p className="text-slate-500 text-sm">{t.role}</p>
                 </div>
               </div>
@@ -211,17 +211,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#00C853]">
+      <section className="py-20 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to grow your wealth with us?
           </h2>
-          <p className="text-green-100 mb-8">
-            Join 140,000+ investors who trust Grow Vest Inc.
+          <p className="text-indigo-100 mb-8">
+            Join 140,000+ investors who trust ApexVest Inc.
           </p>
           <Link
             href="/signup"
-            className="inline-block px-10 py-4 bg-white text-[#00C853] font-bold rounded-xl hover:bg-green-50 transition-colors text-sm"
+            className="inline-block px-10 py-4 bg-white text-[#6366F1] font-bold rounded-xl hover:bg-indigo-50 transition-colors text-sm"
           >
             Create Free Account
           </Link>

@@ -154,7 +154,7 @@ const plans = [
       "Portfolio rebalancing",
     ],
     popular: true,
-    color: "bg-[#0A1628]",
+    color: "bg-[#0A0F1E]",
   },
   {
     name: "Premium",
@@ -179,7 +179,7 @@ const testimonials = [
     name: "Ashley Monroe",
     role: "Entrepreneur, New York",
     avatar: "AM",
-    text: "Grow Vest has completely changed how I manage my money. My portfolio grew 23% in just 8 months. The platform is clean, fast, and trustworthy.",
+    text: "ApexVest has completely changed how I manage my money. My portfolio grew 23% in just 8 months. The platform is clean, fast, and trustworthy.",
     rating: 5,
   },
   {
@@ -198,68 +198,105 @@ const testimonials = [
   },
 ];
 
+const trustPills = [
+  "SEC Registered",
+  "256-bit Encryption",
+  "FINRA Member",
+  "24h Withdrawals",
+];
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-20 sm:pt-20 sm:pt-24 pb-14 sm:pb-16 sm:pb-20 bg-[#0A1628] overflow-hidden">
-        {/* Background grid */}
-        <div className="absolute inset-0 opacity-5">
+      <section className="relative pt-20 sm:pt-24 pb-16 sm:pb-20 bg-[#0A0F1E] overflow-hidden">
+        {/* Dot grid */}
+        <div className="absolute inset-0 opacity-[0.18]">
           <div
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(#00C853 1px, transparent 1px), linear-gradient(90deg, #00C853 1px, transparent 1px)",
-              backgroundSize: "50px 50px",
+                "radial-gradient(circle, #6366F1 1px, transparent 1px)",
+              backgroundSize: "34px 34px",
             }}
           />
         </div>
-        {/* Glow */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-[#00C853]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-10 w-64 h-64 bg-[#00C853]/5 rounded-full blur-2xl" />
+        {/* Gradient mesh glows */}
+        <div className="absolute -top-24 -left-24 w-[28rem] h-[28rem] bg-[#6366F1]/25 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-0 w-96 h-96 bg-[#8B5CF6]/25 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-[#D946EF]/15 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-[#00C853]/10 border border-[#00C853]/30 text-[#00C853] text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00C853] animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-violet-200 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 backdrop-blur">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] animate-pulse" />
               Trusted by 140,000+ investors across the US
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
-              Invest Smarter.{" "}
-              <span className="text-[#00C853]">Grow Faster.</span>
+              Take your wealth to the{" "}
+              <span className="bg-gradient-to-r from-[#6366F1] via-[#8B5CF6] to-[#D946EF] bg-clip-text text-transparent">
+                apex
+              </span>
+              .
             </h1>
             <p className="mt-6 text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
-              Grow Vest Inc. is the premium investment platform that puts your
+              ApexVest Inc. is the premium investment platform that puts your
               money to work. Earn consistent returns, track your portfolio in
               real time, and withdraw anytime.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/signup"
-                className="px-8 py-4 bg-[#00C853] text-white font-semibold rounded-xl hover:bg-[#00a844] transition-all shadow-lg shadow-[#00C853]/25 text-sm"
+                className="px-8 py-4 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-[#6366F1]/30 text-sm"
               >
                 Start Investing Today
               </Link>
               <Link
                 href="/how-it-works"
-                className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/20 text-sm"
+                className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/15 text-sm backdrop-blur"
               >
                 See How It Works
               </Link>
             </div>
+
+            {/* Trust pills */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5">
+              {trustPills.map((p) => (
+                <span
+                  key={p}
+                  className="inline-flex items-center gap-1.5 text-xs text-slate-300 bg-white/5 border border-white/10 rounded-full px-3 py-1.5"
+                >
+                  <svg
+                    className="w-3.5 h-3.5 text-[#8B5CF6]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {p}
+                </span>
+              ))}
+            </div>
           </div>
 
-          {/* Dashboard mockup */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <div className="bg-[#112240] rounded-2xl border border-white/10 p-6 shadow-2xl">
+          {/* Glassmorphism dashboard mockup */}
+          <div className="mt-16 max-w-4xl mx-auto relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#6366F1]/20 to-[#8B5CF6]/20 rounded-3xl blur-2xl" />
+            <div className="relative bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 shadow-2xl">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                <div className="w-3 h-3 rounded-full bg-[#00C853]" />
+                <div className="w-3 h-3 rounded-full bg-red-400/80" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
+                <div className="w-3 h-3 rounded-full bg-[#8B5CF6]" />
                 <span className="ml-2 text-xs text-slate-400">
-                  dashboard.growvest.com
+                  app.apexvestinc.com
                 </span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
@@ -269,27 +306,80 @@ export default function HomePage() {
                   { label: "Active Plans", val: "3 Plans", up: null },
                   { label: "Monthly ROI", val: "18.7%", up: true },
                 ].map((s) => (
-                  <div key={s.label} className="bg-white/5 rounded-xl p-3">
+                  <div
+                    key={s.label}
+                    className="bg-white/5 rounded-xl p-3 border border-white/5"
+                  >
                     <p className="text-slate-400 text-xs mb-1">{s.label}</p>
                     <p
-                      className={`text-sm font-bold ${s.up ? "text-[#00C853]" : "text-white"}`}
+                      className={`text-sm font-bold ${s.up ? "text-[#8B5CF6]" : "text-white"}`}
                     >
                       {s.val}
                     </p>
                   </div>
                 ))}
               </div>
-              {/* Mini chart bars */}
-              <div className="flex items-end gap-2 h-16">
-                {[40, 55, 48, 70, 65, 80, 75, 90, 85, 95, 88, 100].map(
-                  (h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-sm bg-gradient-to-t from-[#00C853]/40 to-[#00C853]"
-                      style={{ height: `${h}%` }}
-                    />
-                  ),
-                )}
+              {/* Area chart */}
+              <div className="relative">
+                <svg
+                  viewBox="0 0 600 160"
+                  className="w-full h-32"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop
+                        offset="0%"
+                        stopColor="#8B5CF6"
+                        stopOpacity="0.45"
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#6366F1"
+                        stopOpacity="0.02"
+                      />
+                    </linearGradient>
+                    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="#6366F1" />
+                      <stop offset="100%" stopColor="#D946EF" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M0,140 C80,130 120,110 180,100 C240,90 280,95 340,70 C400,45 460,55 520,30 C560,20 580,25 600,15 L600,160 L0,160 Z"
+                    fill="url(#areaGrad)"
+                  />
+                  <path
+                    d="M0,140 C80,130 120,110 180,100 C240,90 280,95 340,70 C400,45 460,55 520,30 C560,20 580,25 600,15"
+                    fill="none"
+                    stroke="url(#lineGrad)"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="600" cy="15" r="4" fill="#D946EF" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Floating ROI chip */}
+            <div className="hidden sm:flex absolute -right-5 -bottom-5 items-center gap-3 bg-[#0A0F1E]/90 backdrop-blur border border-white/10 rounded-xl px-4 py-3 shadow-xl">
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center">
+                <svg
+                  className="w-4 h-4 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white text-sm font-bold">+23% YTD</p>
+                <p className="text-slate-400 text-[10px]">Portfolio growth</p>
               </div>
             </div>
           </div>
@@ -297,13 +387,16 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="py-14 bg-[#00C853]">
+      <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((s) => (
-              <div key={s.label}>
-                <p className="text-3xl font-bold text-white">{s.value}</p>
-                <p className="text-green-100 text-sm mt-1">{s.label}</p>
+              <div key={s.label} className="relative">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-1 rounded-full bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]" />
+                <p className="mt-4 text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] bg-clip-text text-transparent">
+                  {s.value}
+                </p>
+                <p className="text-slate-500 text-sm mt-1">{s.label}</p>
               </div>
             ))}
           </div>
@@ -314,10 +407,10 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
               Why Choose Us
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A0F1E]">
               Everything you need to grow your wealth
             </h2>
             <p className="mt-4 text-slate-500">
@@ -329,12 +422,12 @@ export default function HomePage() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="group p-6 rounded-2xl border border-slate-100 hover:border-[#00C853]/30 hover:shadow-lg transition-all"
+                className="group p-6 rounded-2xl border border-slate-100 hover:border-[#6366F1]/30 hover:shadow-lg transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#E8FFF1] text-[#00C853] flex items-center justify-center mb-4 group-hover:bg-[#00C853] group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] text-[#6366F1] flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#6366F1] group-hover:to-[#8B5CF6] group-hover:text-white transition-all">
                   {f.icon}
                 </div>
-                <h3 className="font-semibold text-[#0A1628] mb-2">{f.title}</h3>
+                <h3 className="font-semibold text-[#0A0F1E] mb-2">{f.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">
                   {f.desc}
                 </p>
@@ -348,10 +441,10 @@ export default function HomePage() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
               Investment Plans
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A0F1E]">
               Choose your growth path
             </h2>
             <p className="mt-4 text-slate-500">
@@ -365,22 +458,20 @@ export default function HomePage() {
                 key={p.name}
                 className={`relative rounded-2xl p-8 ${p.color} ${
                   p.popular
-                    ? "ring-2 ring-[#00C853] shadow-2xl scale-105"
+                    ? "ring-2 ring-[#6366F1] shadow-2xl scale-105"
                     : "border border-slate-200 shadow-sm"
                 }`}
               >
                 {p.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00C853] text-white text-xs font-bold px-4 py-1 rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white text-xs font-bold px-4 py-1 rounded-full">
                     Most Popular
                   </div>
                 )}
-                <p
-                  className={`text-sm font-semibold uppercase tracking-widest mb-2 ${p.popular ? "text-[#00C853]" : "text-[#00C853]"}`}
-                >
+                <p className="text-sm font-semibold uppercase tracking-widest mb-2 text-[#6366F1]">
                   {p.name}
                 </p>
                 <p
-                  className={`text-3xl font-bold ${p.popular ? "text-white" : "text-[#0A1628]"}`}
+                  className={`text-3xl font-bold ${p.popular ? "text-white" : "text-[#0A0F1E]"}`}
                 >
                   {p.min}{" "}
                   <span className="text-sm font-normal opacity-60">min.</span>
@@ -388,7 +479,7 @@ export default function HomePage() {
                 <div
                   className={`mt-3 mb-6 text-sm ${p.popular ? "text-slate-300" : "text-slate-500"}`}
                 >
-                  <span className="font-semibold text-[#00C853]">{p.roi}</span>{" "}
+                  <span className="font-semibold text-[#6366F1]">{p.roi}</span>{" "}
                   ROI · {p.duration}
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -398,7 +489,7 @@ export default function HomePage() {
                       className={`flex items-center gap-2 text-sm ${p.popular ? "text-slate-300" : "text-slate-600"}`}
                     >
                       <svg
-                        className="w-4 h-4 text-[#00C853] flex-shrink-0"
+                        className="w-4 h-4 text-[#8B5CF6] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -418,8 +509,8 @@ export default function HomePage() {
                   href="/signup"
                   className={`block text-center py-3 rounded-xl text-sm font-semibold transition-all ${
                     p.popular
-                      ? "bg-[#00C853] text-white hover:bg-[#00a844]"
-                      : "bg-[#0A1628] text-white hover:bg-[#112240]"
+                      ? "bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white hover:opacity-90"
+                      : "bg-[#0A0F1E] text-white hover:bg-[#141B2E]"
                   }`}
                 >
                   Get Started
@@ -434,11 +525,11 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[#00C853] text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">
               Testimonials
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628]">
-              Investors love Grow Vest
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A0F1E]">
+              Investors love ApexVest
             </h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-8">
@@ -462,11 +553,11 @@ export default function HomePage() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#0A1628] text-white text-xs font-bold flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[#0A0F1E] text-white text-xs font-bold flex items-center justify-center">
                     {t.avatar}
                   </div>
                   <div>
-                    <p className="font-semibold text-sm text-[#0A1628]">
+                    <p className="font-semibold text-sm text-[#0A0F1E]">
                       {t.name}
                     </p>
                     <p className="text-xs text-slate-400">{t.role}</p>
@@ -479,22 +570,24 @@ export default function HomePage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-20 bg-[#0A1628]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="relative py-20 bg-[#0A0F1E] overflow-hidden">
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[40rem] h-64 bg-[#6366F1]/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-10 w-72 h-72 bg-[#D946EF]/15 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to start building your wealth?
           </h2>
           <p className="text-slate-300 mb-8 text-lg">
-            Join 140,000+ investors already growing with Grow Vest Inc.
+            Join 140,000+ investors already growing with ApexVest Inc.
           </p>
           <Link
             href="/signup"
-            className="inline-block px-10 py-4 bg-[#00C853] text-white font-semibold rounded-xl hover:bg-[#00a844] transition-all shadow-lg shadow-[#00C853]/25 text-sm"
+            className="inline-block px-10 py-4 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-[#6366F1]/30 text-sm"
           >
             Create Your Free Account
           </Link>
           <p className="mt-4 text-slate-500 text-xs">
-            No hidden fees · Cancel anytime · Secure & regulated
+            No hidden fees · Cancel anytime · Secure &amp; regulated
           </p>
         </div>
       </section>
