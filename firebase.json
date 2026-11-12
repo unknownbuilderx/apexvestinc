@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "growvestinc",
+    "site": "apexvestinc",
     "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,

@@ -2806,7 +2806,7 @@ export default function AdminPage() {
           </div>
           <div>
             <p className="text-white text-xs font-semibold">Admin</p>
-            <p className="text-slate-400 text-xs">admin@growvestinc.com</p>
+            <p className="text-slate-400 text-xs">admin@apexvestinc.com</p>
           </div>
         </div>
         <div className="flex gap-2">
